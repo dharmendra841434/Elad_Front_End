@@ -1,0 +1,85 @@
+@tailwind base;
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(247, 247, 247);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(169, 155, 202);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+@tailwind components;
+@tailwind utilities;
+
+.blur-background {
+  backdrop-filter: blur(var(--tw-blur-blur-background));
+  -webkit-backdrop-filter: blur(var(--tw-blur-blur-background));
+}
+
+@layer base {
+  @font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    src: url(assets/fonts/Poppins-Light.woff) format("woff");
+    src: url(assets/fonts/Poppins-Light.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Poppins;
+    font-weight: 300;
+    src: url(assets/fonts/Poppins-Regular.woff) format("woff");
+    src: url(assets/fonts/Poppins-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    src: url(assets/fonts/Poppins-Medium.woff) format("woff");
+    src: url(assets/fonts/Poppins-Medium.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Poppins;
+    font-weight: 600;
+    src: url(assets/fonts/Poppins-SemiBold.woff) format("woff");
+    src: url(assets/fonts/Poppins-SemiBold.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    src: url(assets/fonts/Poppins-Bold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Poppins;
+    font-weight: 800;
+    src: url(assets/fonts/Poppins-ExtraBold.woff) format("woff");
+    src: url(assets/fonts/Poppins-ExtraBold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Poppins;
+    font-weight: 900;
+    src: url(assets/fonts/Poppins-Black.woff) format("woff");
+  }
+}
+
+/* by Yogesh */
+@layer components {
+  .shadow-card {
+    @apply shadow-[0_2px_2px_0_rgba(0,0,0,.14),0_3px_1px_-2px_rgba(0,0,0,.12),0_1px_5px_0_rgba(0,0,0,.2)];
+  }
+}
+
+/* for hide the scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
